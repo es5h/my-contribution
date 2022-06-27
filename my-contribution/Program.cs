@@ -6,9 +6,7 @@ var app = builder.Build();
 
 var gitHubClient = new RestClient("http://api.github.com");
 
-Task<string> ReturnTestAsync(string msg) => Task.FromResult(msg);
-
-app.MapGet("/test", ReturnTestAsync);
+app.MapGet("/test", TestService.ReturnTestAsync);
 
 app.MapGet("/test/{id}", TestService.IdentityStringAsync);
 

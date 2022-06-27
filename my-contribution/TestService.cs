@@ -1,6 +1,11 @@
-﻿namespace my_contribution;
+﻿using NUnit.Framework;
+
+namespace my_contribution;
 
 public static class TestService
 {
-    public static async Task<string> IdentityStringAsync(string id) => id;
+    [TestCase("identity", ExpectedResult = "identity")]
+    public static async Task<string> IdentityStringAsync(string id) => await Task.FromResult(id);
+    
+    public static async Task<string> ReturnTestAsync() =>  await Task.FromResult("test");
 }
