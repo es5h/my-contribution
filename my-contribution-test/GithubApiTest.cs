@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-using LaYumba.Functional;
-using my_contribution;
+﻿using my_contribution;
 using Xunit.Abstractions;
 
 namespace my_contribution_test;
@@ -17,6 +15,7 @@ public class GithubApiTest
     [Fact]
     public async Task Test()
     {
-        _testOutputHelper.WriteLine(GithubApi.GetReposAsync("es5h").ToString());
+        await GithubApi.GetReposAsync("es5h")
+            .ForEachAsync(_testOutputHelper.WriteLine);
     }
 }
