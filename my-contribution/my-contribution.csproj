@@ -12,6 +12,10 @@
       <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
       <PackageReference Include="NUnit" Version="3.13.3" />
       <PackageReference Include="RestSharp" Version="108.0.2-alpha.0.1" />
+      <PackageReference Include="System.Collections" Version="4.3.0" />
+      <PackageReference Include="System.Collections.Immutable" Version="7.0.0-preview.5.22301.12" />
+      <PackageReference Include="System.Collections.Specialized" Version="4.3.0" />
+      <PackageReference Include="System.Interactive.Async" Version="6.0.1" />
     </ItemGroup>
 
 </Project>
